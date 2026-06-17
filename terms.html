@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#1B4332">
+
+<title>Terms & Conditions | PawCalc</title>
+<meta name="description" content="PawCalc's Terms and Conditions for using our free UK pet cost calculators.">
+<link rel="canonical" href="https://pawcalcc.netlify.app/terms.html">
+<meta name="robots" content="index, follow">
+
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style"
+  href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+  onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap">
+</noscript>
+
+<style>
+  html { scroll-padding-top: 80px; } /* FIX 7: prevent sticky header hiding anchor targets */
+  @media (max-width: 900px) {
+    /* FIX P1.8: mobile ad bar (320×50 + 16px padding ≈ 66px) sits above the 64px sticky
+       header, so anchors need extra offset to clear both elements */
+    html { scroll-padding-top: 150px; }
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --forest: #1B4332; --forest-light: #2D6A4F; --sand: #F5F0E8;
+    --amber: #E07B39; --amber-dark: #C4622A; --white: #FEFCF8;
+    --text: #1A1A1A; --text-muted: #595F6B; --border: #E2D9C8;
+    --result-bg: #F0F7F4; --result-border: #2D6A4F;
+    --ad-bg: #F8F8F8; --ad-border: #D1D5DB;
+    --error: #DC2626; --error-bg: #FEF2F2;
+  }
+  body { font-family: 'Inter', sans-serif; background: var(--sand); color: var(--text); min-height: 100vh; }
+
+  /* ── ACCESSIBILITY: Focus styles ── */
+  *:focus-visible {
+    outline: 3px solid #2563EB;
+    outline-offset: 2px;
+    border-radius: 3px;
+  }
+
+  /* ── ACCESSIBILITY: Skip navigation link (WCAG 2.4.1) ── */
+  .skip-nav {
+    position: absolute;
+    top: -100%;
+    left: 1rem;
+    z-index: 9999;
+    padding: 0.6rem 1.2rem;
+    background: var(--forest);
+    color: var(--white);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 600;
+    border-radius: 0 0 8px 8px;
+    text-decoration: none;
+    transition: top 0.2s;
+  }
+  .skip-nav:focus {
+    top: 0;
+  }
+
+  /* ── SEC-17: COOKIE CONSENT BANNER ── */
+  #cookie-consent-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10000;
+    background: var(--forest);
+    color: var(--white);
+    padding: 1rem 1.5rem;
+    box-shadow: 0 -4px 16px rgba(0,0,0,0.25);
+  }
+  .cookie-banner-inner {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  .cookie-banner-text {
+    flex: 1;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: rgba(255,255,255,0.9);
+  }
+  .cookie-banner-text strong { color: var(--white); }
+  .cookie-banner-text a { color: var(--amber); text-underline-offset: 2px; }
+  .cookie-banner-actions { display: flex; gap: 0.75rem; flex-shrink: 0; flex-wrap: wrap; }
+  .btn-cookie-accept {
+    background: var(--amber);
+    color: var(--white);
+    border: none;
+    border-radius: 6px;
+    padding: 0.5rem 1.25rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .btn-cookie-accept:hover { background: var(--amber-dark); }
+  .btn-cookie-decline {
+    background: transparent;
+    color: rgba(255,255,255,0.75);
+    border: 1px solid rgba(255,255,255,0.35);
+    border-radius: 6px;
+    padding: 0.5rem 1.25rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .btn-cookie-decline:hover { border-color: rgba(255,255,255,0.7); color: var(--white); }
+
+  /* ── AD SLOTS ── */
+  .ad-slot {
+    background: var(--ad-bg);
+    border: 1px dashed var(--ad-border);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #6B7280;
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+  }
+  .ad-slot::before {
+    content: 'Advertisement';
+    display: block;
+    font-size: 0.65rem;
+    margin-bottom: 0.3rem;
+    opacity: 0.7;
+  }
+  /* Leaderboard 728×90 */
+  .ad-leaderboard { width: 100%; height: 90px; max-width: 728px; margin: 0 auto; }
+  /* Banner 320×50 mobile */
+  .ad-mobile-banner { width: 100%; height: 50px; display: none; }
+  /* Rectangle 300×250 */
+  .ad-rectangle { width: 300px; height: 250px; }
+  /* Wide rectangle 336×280 */
+  .ad-rectangle-wide { width: 100%; height: 280px; }
+  /* Half page 300×600 */
+  .ad-halfpage { width: 300px; height: 600px; }
+  /* In-content 468×60 */
+  .ad-in-content { width: 100%; height: 60px; }
+  /* Sticky sidebar */
+  .ad-sticky { position: sticky; top: 80px; }
+
+  .ad-slot-wrap { margin: 1.25rem 0; text-align: center; }
+  .ad-slot-wrap-inline { margin: 1.5rem 0; }
+
+  @media (max-width: 900px) {
+    .ad-leaderboard { display: none; }
+    .ad-mobile-banner { display: flex; }
+    .ad-halfpage { display: none; }
+    .ad-rectangle { width: 100%; }
+  }
+
+  /* ── HEADER ── */
+  header { background: var(--forest); padding: 0 2rem; position: sticky; top: 0; z-index: 200; box-shadow: 0 2px 12px rgba(0,0,0,0.2); }
+  .header-inner { max-width: 1300px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+  .logo { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 700; color: var(--white); text-decoration: none; display: flex; align-items: center; gap: 0.5rem; }
+  .logo span { color: var(--amber); }
+  nav { display: flex; gap: 1.5rem; }
+  nav a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 0.875rem; font-weight: 500; transition: color 0.2s; }
+  nav a:hover, nav a:focus { color: var(--white); }
+
+  /* ── HEADER AD BAR ── */
+  .header-ad-bar { background: #fff; border-bottom: 1px solid var(--border); padding: 8px 0; text-align: center; }
+
+  /* ── HERO ── */
+  .hero { background: linear-gradient(135deg, var(--forest) 0%, var(--forest-light) 100%); padding: 3.5rem 2rem 2.5rem; text-align: center; position: relative; overflow: hidden; }
+  .hero::before { content: ''; position: absolute; font-size: 18rem; opacity: 0.04; top: -3rem; right: -2rem; line-height: 1; pointer-events: none; }
+  .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 700; color: var(--white); line-height: 1.15; margin-bottom: 1rem; }
+  .hero h1 em { color: var(--amber); font-style: normal; }
+  .hero p { color: rgba(255,255,255,0.75); font-size: 1.05rem; max-width: 520px; margin: 0 auto 1.75rem; line-height: 1.6; }
+  .hero-badges { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; }
+  .badge { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2); color: var(--white); padding: 0.35rem 0.9rem; border-radius: 999px; font-size: 0.78rem; font-weight: 500; }
+
+  /* ── PAGE LAYOUT (sidebar) ── */
+  .page-wrap { max-width: 1300px; margin: 0 auto; padding: 2.5rem 1.5rem 5rem; display: grid; grid-template-columns: 1fr 320px; gap: 2rem; align-items: start; }
+  @media (max-width: 1024px) { .page-wrap { grid-template-columns: 1fr; } .sidebar { display: none; } }
+
+  /* ── SIDEBAR ── */
+  .sidebar { display: flex; flex-direction: column; gap: 1.5rem; }
+  .sidebar-widget { background: var(--white); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+  .sidebar-widget-title { background: var(--forest); color: var(--white); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; padding: 0.6rem 1rem; }
+  .sidebar-widget-body { padding: 1rem; }
+  .tip-item { display: flex; gap: 0.6rem; align-items: flex-start; padding: 0.5rem 0; border-bottom: 1px dashed var(--border); font-size: 0.8rem; line-height: 1.45; color: var(--text); }
+  .tip-item:last-child { border-bottom: none; }
+  .tip-icon { font-size: 1rem; flex-shrink: 0; margin-top: 1px; }
+
+  /* ── MAIN CONTENT ── */
+  .content-col { min-width: 0; }
+
+  /* ── CALCULATOR TABS ── */
+  .calc-tabs { display: flex; background: var(--white); border: 1px solid var(--border); border-radius: 12px 12px 0 0; overflow: hidden; border-bottom: none; }
+  .calc-tab { flex: 1; padding: 1rem 1.2rem; border: none; background: transparent; font-family: 'Inter', sans-serif; font-size: 0.82rem; font-weight: 500; color: var(--text-muted); cursor: pointer; transition: all 0.2s; border-bottom: 3px solid transparent; display: flex; align-items: center; justify-content: center; gap: 0.4rem; }
+  @media (max-width: 500px) { .calc-tab { padding: 0.75rem 0.5rem; font-size: 0.72rem; flex-direction: column; gap: 0.2rem; } }
+  .calc-tab:not(:last-child) { border-right: 1px solid var(--border); }
+  .calc-tab.active { background: var(--forest); color: var(--white); border-bottom-color: var(--amber); }
+  .calc-tab:hover:not(.active) { background: var(--sand); color: var(--text); }
+
+  /* ── CALCULATOR PANEL ── */
+  .calc-panel { background: var(--white); border: 1px solid var(--border); border-radius: 0 0 12px 12px; padding: 1.75rem 1.75rem 2rem; display: none; }
+  .calc-panel.active { display: block; }
+  .calc-header { margin-bottom: 1.5rem; }
+  .calc-header h2 { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 600; color: var(--forest); margin-bottom: 0.3rem; }
+  .calc-header p { color: var(--text-muted); font-size: 0.85rem; line-height: 1.5; }
+
+  /* ── FORM GRID ── */
+  .calc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem 1.75rem; }
+  @media (max-width: 600px) { .calc-grid { grid-template-columns: 1fr; } }
+  .full-width { grid-column: 1 / -1; }
+  .field { display: flex; flex-direction: column; gap: 0.35rem; }
+  .field label { font-size: 0.75rem; font-weight: 600; color: var(--forest); text-transform: uppercase; letter-spacing: 0.04em; }
+  .field select, .field input[type="number"] { width: 100%; padding: 0.6rem 0.85rem; border: 1.5px solid var(--border); border-radius: 8px; font-family: 'Inter', sans-serif; font-size: 0.875rem; color: var(--text); background: var(--white); transition: border-color 0.2s, box-shadow 0.2s; appearance: none; -webkit-appearance: none; }
+  .field select:focus, .field input[type="number"]:focus { border-color: var(--forest-light); box-shadow: 0 0 0 3px rgba(45,106,79,0.1); }
+  .field select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%231B4332' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 0.85rem center; padding-right: 2.4rem; cursor: pointer; }
+  .field-error { font-size: 0.72rem; color: var(--error); margin-top: 0.25rem; display: none; }
+  .field-error.show { display: block; }
+  .field.has-error select, .field.has-error input { border-color: var(--error); box-shadow: 0 0 0 3px rgba(220,38,38,0.1); }
+  .checkbox-group { display: grid; grid-template-columns: 1fr 1fr; gap: 0.45rem; margin-top: 0.15rem; }
+  @media (max-width: 420px) { .checkbox-group { grid-template-columns: 1fr; } }
+  .checkbox-item { display: flex; align-items: center; gap: 0.45rem; cursor: pointer; font-size: 0.82rem; color: var(--text); }
+  .checkbox-item input[type="checkbox"] { width: 15px; height: 15px; accent-color: var(--forest); cursor: pointer; flex-shrink: 0; }
+  .btn-calc { width: 100%; padding: 0.85rem; background: var(--amber); color: var(--white); border: none; border-radius: 10px; font-family: 'Inter', sans-serif; font-size: 1rem; font-weight: 600; cursor: pointer; transition: background 0.2s, transform 0.1s; margin-top: 1rem; letter-spacing: 0.02em; }
+  .btn-calc:hover { background: var(--amber-dark); }
+  .btn-calc:active { transform: scale(0.99); }
+
+  /* ── AD SLOT: ABOVE RESULTS ── */
+  .pre-results-ad { margin: 1.5rem 0 0; }
+
+  /* ── RESULTS ── */
+  .results { display: none; margin-top: 0; background: var(--result-bg); border: 1.5px solid var(--result-border); border-radius: 10px; padding: 1.4rem; }
+  .results.show { display: block; }
+  .results h3 { font-family: 'Playfair Display', serif; font-size: 1.05rem; color: var(--forest); margin-bottom: 1.1rem; display: flex; align-items: center; gap: 0.45rem; }
+  .result-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 0.85rem; margin-bottom: 1.1rem; }
+  .result-card { background: var(--white); border: 1px solid var(--border); border-radius: 8px; padding: 0.9rem; text-align: center; }
+  .result-card .label { font-size: 0.68rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); margin-bottom: 0.35rem; }
+  .result-card .value { font-size: 1.3rem; font-weight: 700; color: var(--forest); font-family: 'Playfair Display', serif; }
+  .result-card .sub { font-size: 0.68rem; color: var(--text-muted); margin-top: 0.15rem; }
+  .result-card.highlight { background: var(--forest); border-color: var(--forest); }
+  .result-card.highlight .label { color: rgba(255,255,255,0.75); }
+  .result-card.highlight .value { color: var(--white); }
+  .result-card.highlight .sub { color: rgba(255,255,255,0.65); }
+  .breakdown { border-top: 1px solid var(--border); padding-top: 0.9rem; margin-top: 0.4rem; }
+  .breakdown-title { font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); margin-bottom: 0.65rem; }
+  .breakdown-row { display: flex; justify-content: space-between; align-items: center; padding: 0.35rem 0; font-size: 0.845rem; border-bottom: 1px dashed var(--border); }
+  .breakdown-row:last-child { border-bottom: none; }
+  .breakdown-row.total-row { font-weight: 700; }
+  .item-name { color: var(--text); }
+  .item-cost { font-weight: 600; color: var(--forest); }
+  .item-cost.amber { color: var(--amber-dark); }
+  .result-note { margin-top: 0.9rem; padding: 0.7rem 0.9rem; background: rgba(224,123,57,0.08); border-left: 3px solid var(--amber); border-radius: 0 6px 6px 0; font-size: 0.78rem; color: var(--text-muted); line-height: 1.5; }
+
+  /* ── PRINT / PDF EXPORT ── */
+  .btn-export { display: inline-flex; align-items: center; gap: 0.4rem; margin-top: 1rem; padding: 0.5rem 1rem; background: transparent; border: 1.5px solid var(--forest); color: var(--forest); border-radius: 8px; font-family: 'Inter', sans-serif; font-size: 0.8rem; font-weight: 600; cursor: pointer; transition: background 0.2s, color 0.2s; }
+  .btn-export:hover { background: var(--forest); color: var(--white); }
+  @media print {
+    .header-ad-bar, header, .sidebar, .calc-tabs, .email-capture-card,
+    .footer-ad-zone, footer, .pre-results-ad, .mid-content-ad,
+    .btn-calc, .btn-export, .between-sections-ad { display: none !important; }
+    .results.show { display: block !important; border: 1px solid #ccc; }
+    .calc-panel { display: block !important; }
+    body { background: #fff; }
+  }
+
+  /* ── AD SLOT: MID-CONTENT ── */
+  .mid-content-ad { margin: 1.5rem 0; }
+
+  /* FIX 9: Reserve ad slot dimensions to prevent Cumulative Layout Shift (CLS) */
+  /* pre-results-ad slots — hidden until calculate is clicked */
+  .pre-results-ad {
+    min-height: 70px;      /* tall enough for 468×60 + padding */
+    visibility: hidden;    /* reserves space; display:none would collapse it */
+  }
+  .pre-results-ad.is-visible {
+    visibility: visible;
+  }
+  /* Between-sections ad */
+  .between-sections-ad {
+    min-height: 100px;     /* 728×90 leaderboard + margin breathing room */
+  }
+  /* Footer leaderboard ad */
+  .footer-leaderboard {
+    min-height: 100px;
+  }
+  /* Sidebar rectangle ad */
+  .ad-slot.ad-rectangle { min-height: 250px; }
+  /* Sidebar half-page ad — explicit height already set inline; keep as fallback */
+  .ad-slot.ad-halfpage  { min-height: 600px; }
+
+  /* ── HOW WE CALCULATE ── */
+  .how-we-calc { margin-top: 1.5rem; }
+  .how-we-calc details { background: rgba(27,67,50,0.04); border: 1px solid var(--border); border-radius: 8px; }
+  .how-we-calc summary { padding: 0.75rem 1rem; cursor: pointer; font-size: 0.8rem; font-weight: 600; color: var(--forest); list-style: none; display: flex; align-items: center; gap: 0.4rem; }
+  .how-we-calc summary::before { content: '▶'; font-size: 0.65rem; transition: transform 0.2s; }
+  .how-we-calc details[open] summary::before { transform: rotate(90deg); }
+  .how-we-calc details p { padding: 0 1rem 0.75rem; font-size: 0.78rem; color: var(--text-muted); line-height: 1.6; }
+
+  /* ── EMAIL CAPTURE CARD ── */
+  .email-capture-card {
+    display: none;
+    margin-top: 1.5rem;
+    background: linear-gradient(135deg, var(--forest) 0%, var(--forest-light) 100%);
+    border-radius: 12px;
+    padding: 1.75rem;
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+  }
+  .email-capture-card.show { display: block; }
+  .email-capture-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 0.5rem;
+    line-height: 1.25;
+  }
+  .email-capture-card .sub-line {
+    color: rgba(255,255,255,0.75);
+    font-size: 0.82rem;
+    margin-bottom: 1rem;
+  }
+  .capture-benefits {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.4rem 1rem;
+    margin-bottom: 1.25rem;
+  }
+  @media (max-width: 500px) { .capture-benefits { grid-template-columns: 1fr; } }
+  .capture-benefit {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.9);
+  }
+  .capture-benefit::before { content: '✓'; color: var(--amber); font-weight: 700; font-size: 0.9rem; flex-shrink: 0; }
+  .capture-form { display: flex; flex-direction: column; gap: 0.6rem; }
+  .capture-form input[type="email"],
+  .capture-form input[type="text"] {
+    width: 100%;
+    padding: 0.65rem 1rem;
+    border: 1.5px solid rgba(255,255,255,0.25);
+    border-radius: 8px;
+    background: rgba(255,255,255,0.12);
+    color: var(--white);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.875rem;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .capture-form input::placeholder { color: rgba(255,255,255,0.5); }
+  .capture-form input:focus { border-color: var(--amber); background: rgba(255,255,255,0.18); }
+  .capture-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; }
+  @media (max-width: 500px) { .capture-form-row { grid-template-columns: 1fr; } }
+  .capture-error { font-size: 0.75rem; color: #FCA5A5; margin-top: 0.2rem; display: none; }
+  .capture-error.show { display: block; }
+  /* GDPR consent */
+  .gdpr-row { display: flex; align-items: flex-start; gap: 0.5rem; margin-top: 0.25rem; }
+  .gdpr-row input[type="checkbox"] { margin-top: 0.15rem; flex-shrink: 0; accent-color: var(--amber); }
+  .gdpr-row label { font-size: 0.72rem; color: rgba(255,255,255,0.8); line-height: 1.4; }
+  .gdpr-row a { color: var(--amber); text-decoration: underline; }
+  .btn-capture {
+    width: 100%;
+    padding: 0.8rem;
+    background: var(--amber);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s, opacity 0.2s;
+    margin-top: 0.2rem;
+    letter-spacing: 0.02em;
+  }
+  .btn-capture:hover { background: var(--amber-dark); }
+  .btn-capture:disabled { opacity: 0.6; cursor: not-allowed; }
+  .capture-privacy { font-size: 0.68rem; color: rgba(255,255,255,0.70); text-align: center; margin-top: 0.5rem; }
+  .capture-privacy a { color: rgba(255,255,255,0.85); text-decoration: underline; }
+  .capture-success { display: none; text-align: center; padding: 1rem 0; }
+  .capture-success.show { display: block; }
+  .capture-success .big-tick { font-size: 2.5rem; margin-bottom: 0.5rem; }
+  .capture-success p { color: rgba(255,255,255,0.85); font-size: 0.875rem; line-height: 1.5; }
+  .capture-loading { display: none; text-align: center; padding: 0.5rem 0; font-size: 0.85rem; color: rgba(255,255,255,0.75); }
+  .capture-loading.show { display: block; }
+
+  /* ── CAPTURE DISMISS BUTTON ── */
+  .btn-capture-dismiss {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.25);
+    color: rgba(255,255,255,0.8);
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1rem;
+    line-height: 1;
+    transition: background 0.2s, color 0.2s;
+    flex-shrink: 0;
+  }
+  .btn-capture-dismiss:hover { background: rgba(255,255,255,0.28); color: var(--white); }
+
+  /* ── SECONDARY MINI CALCULATORS ── */
+  .mini-calcs { margin-top: 2.5rem; }
+  .mini-calcs-heading { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--forest); margin-bottom: 1.25rem; }
+  .mini-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; }
+  .mini-card { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; transition: box-shadow 0.2s; }
+  .mini-card:hover { box-shadow: 0 4px 18px rgba(0,0,0,0.07); }
+  .mini-card-icon { font-size: 1.75rem; margin-bottom: 0.65rem; }
+  .mini-card h3 { font-family: 'Playfair Display', serif; font-size: 1.05rem; color: var(--forest); margin-bottom: 0.35rem; }
+  .mini-card p { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1.1rem; line-height: 1.5; }
+  .mini-field { margin-bottom: 0.75rem; }
+  .mini-field label { display: block; font-size: 0.72rem; font-weight: 600; color: var(--forest); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 0.28rem; }
+  .mini-field select, .mini-field input[type="number"] { width: 100%; padding: 0.52rem 0.75rem; border: 1.5px solid var(--border); border-radius: 7px; font-family: 'Inter', sans-serif; font-size: 0.85rem; color: var(--text); background: var(--white); transition: border-color 0.2s; appearance: none; -webkit-appearance: none; }
+  .mini-field select:focus, .mini-field input[type="number"]:focus { border-color: var(--forest-light); }
+  .mini-field select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%231B4332' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 0.75rem center; padding-right: 2.1rem; cursor: pointer; }
+  .btn-mini { width: 100%; padding: 0.6rem; background: var(--forest); color: var(--white); border: none; border-radius: 8px; font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 600; cursor: pointer; transition: background 0.2s; }
+  .btn-mini:hover { background: var(--forest-light); }
+  .mini-result { display: none; margin-top: 0.9rem; background: var(--result-bg); border: 1px solid var(--result-border); border-radius: 8px; padding: 0.9rem; font-size: 0.875rem; }
+  .mini-result.show { display: block; }
+  .mini-result .big { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--forest); font-weight: 600; }
+  .mini-result .note { color: var(--text-muted); font-size: 0.75rem; margin-top: 0.35rem; line-height: 1.4; }
+
+  /* ── BETWEEN SECTIONS AD ── */
+  .between-sections-ad { margin: 2rem 0; text-align: center; }
+
+  /* ── FOOTER RECOMMENDATION AREA ── */
+  .footer-ad-zone { background: var(--white); border-top: 1px solid var(--border); padding: 2rem 1.5rem; }
+  .footer-ad-inner { max-width: 1300px; margin: 0 auto; }
+  .footer-ad-inner h2 { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--forest); margin-bottom: 1rem; text-align: center; }
+  .footer-ad-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
+  .footer-rec-card { border: 1px dashed var(--ad-border); border-radius: 10px; padding: 1.25rem; background: var(--ad-bg); display: flex; align-items: flex-start; gap: 0.9rem; }
+  .footer-rec-icon { font-size: 1.8rem; flex-shrink: 0; }
+  .footer-rec-body h3 { font-size: 0.875rem; font-weight: 600; color: var(--text); margin-bottom: 0.2rem; }
+  .footer-rec-body p { font-size: 0.75rem; color: var(--text-muted); line-height: 1.4; }
+  .footer-rec-body .ad-label { display: inline-block; font-size: 0.62rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: #9CA3AF; background: #E5E7EB; border-radius: 3px; padding: 1px 5px; margin-bottom: 0.25rem; }
+  .footer-leaderboard { margin-top: 1.5rem; text-align: center; }
+
+  /* ── FOOTER ── */
+  footer { background: var(--forest); color: rgba(255,255,255,0.55); padding: 1.75rem 2rem; font-size: 0.78rem; line-height: 1.8; }
+  .footer-inner { max-width: 1300px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between; align-items: center; }
+  footer strong { color: rgba(255,255,255,0.85); }
+  footer a { color: rgba(255,255,255,0.65); text-decoration: underline; }
+  footer a:hover { color: var(--white); }
+  .footer-links { display: flex; gap: 1.25rem; flex-wrap: wrap; }
+
+  /* ── PRIVACY POLICY PAGE ── */
+  #privacy-page {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: var(--sand);
+    overflow-y: auto;
+  }
+  #privacy-page.active { display: block; }
+  .pp-header {
+    background: var(--forest);
+    padding: 0 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+  }
+  .pp-header-inner {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+  }
+  .pp-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--white);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+  }
+  .pp-logo span { color: var(--amber); }
+  .pp-back-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.25);
+    color: var(--white);
+    padding: 0.45rem 1rem;
+    border-radius: 6px;
+    font-size: 0.82rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+    font-family: 'Inter', sans-serif;
+  }
+  .pp-back-btn:hover { background: rgba(255,255,255,0.22); }
+  .pp-hero {
+    background: linear-gradient(135deg, var(--forest) 0%, var(--forest-light) 100%);
+    padding: 3rem 2rem 2.5rem;
+    text-align: center;
+  }
+  .pp-hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.6rem, 3.5vw, 2.6rem);
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.2;
+    margin-bottom: 0.75rem;
+  }
+  .pp-hero h1 em { color: var(--amber); font-style: normal; }
+  .pp-hero p {
+    color: rgba(255,255,255,0.7);
+    font-size: 0.95rem;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+  .pp-body {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 2.5rem 2rem 4rem;
+  }
+  .pp-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 2.5rem 2.25rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  }
+
+  /* Privacy content typography — override termly defaults to match site theme */
+  .pp-card [data-custom-class="title"],
+  .pp-card [data-custom-class="title"] * {
+    font-family: 'Playfair Display', serif !important;
+    font-size: 2rem !important;
+    color: var(--forest) !important;
+  }
+  .pp-card h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: var(--forest);
+    margin-bottom: 0.5rem;
+  }
+  .pp-card h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    color: var(--forest);
+    margin: 2rem 0 0.75rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+  }
+  .pp-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem;
+    color: var(--forest-light);
+    margin: 1.5rem 0 0.5rem;
+  }
+  .pp-card [data-custom-class="subtitle"],
+  .pp-card [data-custom-class="subtitle"] * {
+    font-family: 'Inter', sans-serif !important;
+    color: var(--text-muted) !important;
+    font-size: 0.88rem !important;
+  }
+  .pp-card [data-custom-class="body_text"],
+  .pp-card [data-custom-class="body_text"] * {
+    font-family: 'Inter', sans-serif !important;
+    color: var(--text) !important;
+    font-size: 0.9rem !important;
+    line-height: 1.7 !important;
+  }
+  .pp-card [data-custom-class="link"],
+  .pp-card [data-custom-class="link"] * {
+    color: var(--forest-light) !important;
+    font-size: 0.9rem !important;
+  }
+  .pp-card [data-custom-class="heading_1"] {
+    font-family: 'Playfair Display', serif !important;
+    color: var(--forest) !important;
+  }
+  .pp-card [data-custom-class="heading_2"] {
+    font-family: 'Playfair Display', serif !important;
+    color: var(--forest-light) !important;
+  }
+  .pp-card a { color: var(--forest-light); }
+  .pp-card a:hover { color: var(--amber-dark); }
+  .pp-card ul { margin: 0.5rem 0 0.5rem 1.5rem; }
+  .pp-card li { margin-bottom: 0.4rem; font-size: 0.9rem; line-height: 1.65; color: var(--text); }
+  .pp-card table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.85rem; }
+  .pp-card table th, .pp-card table td { padding: 0.6rem 0.75rem; border: 1px solid var(--border); text-align: left; color: var(--text); }
+  .pp-card table th { background: var(--result-bg); font-weight: 600; color: var(--forest); }
+  .pp-card table tr:nth-child(even) td { background: #fafafa; }
+  /* Hide Termly logo image */
+  .pp-card > span:first-child { display: none !important; }
+  .pp-card .privacy123 { display: none; }
+  .pp-toc {
+    background: var(--result-bg);
+    border: 1px solid var(--result-border);
+    border-radius: 10px;
+    padding: 1.25rem 1.5rem;
+    margin: 1.5rem 0 2rem;
+  }
+  .pp-toc-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    color: var(--forest);
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+  .pp-footer {
+    background: var(--forest);
+    color: rgba(255,255,255,0.55);
+    padding: 1.75rem 2rem;
+    font-size: 0.78rem;
+    line-height: 1.8;
+  }
+  .pp-footer-inner {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .pp-footer strong { color: rgba(255,255,255,0.85); }
+  .pp-footer a { color: rgba(255,255,255,0.65); text-decoration: underline; }
+  .pp-footer a:hover { color: var(--white); }
+
+  /* ── P3.3 UTILITY CLASSES (extracted from inline styles) ── */
+
+  /* Fieldset reset — replaces style="border:none; padding:0;" on <fieldset> */
+  .fieldset-reset { border: none; padding: 0; }
+
+  /* Fieldset legend label — replaces the verbose inline legend style */
+  .legend-label { font-size: 0.75rem; font-weight: 600; color: var(--forest); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 0.4rem; }
+
+  /* Capture form field labels — replaces repeated inline label styles inside .email-capture-card */
+  .capture-label { font-size: 0.72rem; color: rgba(255,255,255,0.7); display: block; margin-bottom: 0.2rem; }
+
+  /* Read-only breed display input */
+  .input-readonly-muted { opacity: 0.7; cursor: default; }
+
+  /* Field hint text — replaces class="field-hint" on hint spans */
+  .field-hint { font-size: 0.7rem; color: var(--text-muted); }
+
+  /* Sidebar widget no-padding body — replaces style="padding:0;" on .sidebar-widget-body */
+  .sidebar-widget-body--flush { padding: 0; }
+
+  /* Sidebar ad spacer — replaces style="margin-top:1.25rem;" wrapper divs */
+  .sidebar-spacer { margin-top: 1.25rem; }
+
+  /* Ad slot full-width — replaces style="width:100%;" on ad-slot divs */
+  .ad-slot--full { width: 100%; }
+
+  /* Ad slot halfpage — replaces style="width:100%; height:600px;" */
+  .ad-slot--halfpage { width: 100%; height: 600px; }
+
+  /* Mobile banner centred — replaces style="margin:0 auto;" in footer */
+  .ad-slot--centred { margin: 0 auto; }
+
+  .footer-legal-notice {
+    display: block;
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    margin-top: 0.25rem;
+    font-style: italic;
+  }
+  /* Link styling for Cookie Settings in footer nav */
+  .footer-links a[id="footer-cookie-settings-link"] {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  /* Privacy/Terms/Cookie page body text paragraphs */
+  .policy-body-text { line-height: 1.7; font-size: 0.9rem; }
+  .policy-list-item { line-height: 1.65; font-size: 0.9rem; margin-bottom: 0.4rem; }
+
+  /* Policy TOC link list */
+  .policy-toc-links { line-height: 2; font-size: 0.88rem; }
+
+  /* Policy subtitle date line */
+  .policy-subtitle { color: rgb(127,127,127); font-size: 0.88rem; }
+
+  /* Terms footer attribution */
+  .policy-footer-attr { line-height: 1.5; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border); }
+
+  /* policy-lh: replaces pervasive style="line-height:1.5;" in legal overlay text */
+  .policy-lh { line-height: 1.5; }
+  .policy-footer-attr-text { font-size: 0.8rem; color: var(--text-muted); }
+
+  /* Cookie policy last-updated line */
+  .cookie-last-updated { color: var(--text-muted); font-size: 0.88rem; }
+</style>
+
+<style>
+  /* Standalone legal page: render as a normal page, not a hidden JS overlay */
+  .legal-standalone-page { background: var(--sand); min-height: 100vh; }
+  .pp-body-placeholder { display: none; }
+</style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-nav">Skip to main content</a>
+
+<div class="legal-standalone-page">
+
+  <header class="pp-header">
+    <div class="pp-header-inner">
+      <a class="pp-logo" href="/" title="Back to PawCalc">🐾 Paw<span>Calc</span></a>
+      <a class="pp-back-btn" href="/" aria-label="Back to calculator" style="text-decoration:none;">
+        ← Back to Calculator
+      </a>
+    </div>
+  </header>
+
+  <div class="pp-hero">
+    <h1>Terms &amp; <em>Conditions</em></h1>
+    <p>Please read these terms carefully before using PawCalc.</p>
+  </div>
+
+  <main id="main-content" class="pp-body">
+    <div class="pp-card">
+      <div data-custom-class="body">
+
+        <div><strong><span data-custom-class="title"><h1>TERMS AND CONDITIONS</h1></span></strong></div>
+        <div><span data-custom-class="subtitle"><strong>Last updated June 12, 2026</strong></span></div>
+        <div><br></div>
+
+        <div class="policy-lh"><strong><span data-custom-class="heading_1"><h2>AGREEMENT TO OUR LEGAL TERMS</h2></span></strong></div>
+
+        <div data-custom-class="body_text" class="policy-lh">We are <strong>PawCalc</strong> (<strong>'Company'</strong>, <strong>'we'</strong>, <strong>'us'</strong>, or <strong>'our'</strong>).</div>
+        <div><br></div>
+        <div data-custom-class="body_text" class="policy-lh">We operate the website <a href="https://pawcalcc.netlify.app" target="_blank" rel="noopener" data-custom-class="link">https://pawcalcc.netlify.app</a> (the <strong>'Site'</strong>), as well as any other related products and services that refer or link to these legal terms (the <strong>'Legal Terms'</strong>) (collectively, the <strong>'Services'</strong>).</div>
+        <div><br></div>
+        <div data-custom-class="body_text" class="policy-lh">PawCalc is an online pet ownership cost calculator designed to help current and prospective pet owners estimate the financial costs associated with owning and caring for pets. The platform provides calculators, tools, guides, and informational content relating to pet ownership expenses, including but not limited to food, insurance, veterinary care, grooming, training, and other pet-related costs.</div>
+        <div><br></div>
+        <div data-custom-class="body_text" class="policy-lh">You can contact us by email at <a href="mailto:pawcalcc@gmail.com" data-custom-class="link">pawcalcc@gmail.com</a>.</div>
+        <div><br></div>
+        <div data-custom-class="body_text" class="policy-lh">These Legal Terms constitute a legally binding agreement made between you (<strong>'you'</strong>) and PawCalc, concerning your access to and use of the Services. You agree that by accessing the Services, you have read, understood, and agreed to be bound by all of these Legal Terms. IF YOU DO NOT AGREE WITH ALL OF THESE LEGAL TERMS, THEN YOU ARE EXPRESSLY PROHIBITED FROM USING THE SERVICES AND YOU MUST DISCONTINUE USE IMMEDIATELY.</div>
+        <div><br></div>
+        <div data-custom-class="body_text" class="policy-lh">We reserve the right to make changes or modifications to these Legal Terms from time to time. We will alert you about any changes by updating the 'Last updated' date. It is your responsibility to periodically review these Legal Terms to stay informed of updates.</div>
+        <div><br></div>
+        <div data-custom-class="body_text" class="policy-lh">The Services are intended for users who are at least 18 years old. Persons under the age of 18 are not permitted to use or register for the Services.</div>
+        <div><br></div>
+        <div data-custom-class="body_text" class="policy-lh">We recommend that you print a copy of these Legal Terms for your records.</div>
+        <div><br></div>
+
+        <!-- TABLE OF CONTENTS -->
+        <div class="policy-lh"><strong><span data-custom-class="heading_1"><h2>TABLE OF CONTENTS</h2></span></strong></div>
+        <div class="pp-toc">
+          <div class="pp-toc-title">📋 Sections</div>
+          <div class="policy-toc-links">
+            <a href="#tc-services" data-custom-class="link">1. Our Services</a><br>
+            <a href="#tc-ip" data-custom-class="link">2. Intellectual Property Rights</a><br>
+            <a href="#tc-userreps" data-custom-class="link">3. User Representations</a><br>
+            <a href="#tc-userreg" data-custom-class="link">4. User Registration</a><br>
+            <a href="#tc-prohibited" data-custom-class="link">5. Prohibited Activities</a><br>
+            <a href="#tc-ugc" data-custom-class="link">6. User Generated Contributions</a><br>
+            <a href="#tc-license" data-custom-class="link">7. Contribution Licence</a><br>
+            <a href="#tc-thirdparty" data-custom-class="link">8. Third-Party Websites and Content</a><br>
+            <a href="#tc-advertisers" data-custom-class="link">9. Advertisers</a><br>
+            <a href="#tc-sitemanage" data-custom-class="link">10. Services Management</a><br>
+            <a href="#tc-ppyes" data-custom-class="link">11. Privacy Policy</a><br>
+            <a href="#tc-terms" data-custom-class="link">12. Term and Termination</a><br>
+            <a href="#tc-modifications" data-custom-class="link">13. Modifications and Interruptions</a><br>
+            <a href="#tc-law" data-custom-class="link">14. Governing Law</a><br>
+            <a href="#tc-disputes" data-custom-class="link">15. Dispute Resolution</a><br>
+            <a href="#tc-corrections" data-custom-class="link">16. Corrections</a><br>
+            <a href="#tc-disclaimer" data-custom-class="link">17. Disclaimer</a><br>
+            <a href="#tc-liability" data-custom-class="link">18. Limitations of Liability</a><br>
+            <a href="#tc-indemnification" data-custom-class="link">19. Indemnification</a><br>
+            <a href="#tc-userdata" data-custom-class="link">20. User Data</a><br>
+            <a href="#tc-electronic" data-custom-class="link">21. Electronic Communications, Transactions, and Signatures</a><br>
+            <a href="#tc-california" data-custom-class="link">22. Jurisdiction-Specific Consumer Rights</a><br>
+            <a href="#tc-misc" data-custom-class="link">23. Miscellaneous</a><br>
+            <a href="#tc-contact" data-custom-class="link">24. Contact Us</a>
+          </div>
+        </div>
+
+        <!-- SECTION 1 -->
+        <div id="tc-services" class="policy-lh"><strong><span data-custom-class="heading_1"><h2>1. OUR SERVICES</h2></span></strong></div>
+        <div data-custom-class="body_text" class="policy-lh">The information provided when using the Services is not intended for distribution to or use by any person or entity in any jurisdiction or country where such distribution or use would be contrary to law or regulation or which would subject us to any registration requirement within such jurisdiction or country. Accordingly, those persons who choose to access the Services from other locations do so on their own initiative and are solely responsible for compliance with local laws, if and to the extent local laws are applicable.</div>
+        <div><br></div>
+        <div data-custom-class="body_text" class="policy-lh">PawCalc is an information and estimation service. The cost figures provided by our calculators are indicative estimates based on typical UK market data and are not financial, veterinary, or professional advice. You should always obtain individual quotes from relevant professionals and suppliers before making any financial commitment relating to pet ownership.</div>
+        <div><br></div>
+
+        <!-- SECTION 2 -->
+        <div id="tc-ip" class="policy-lh"><strong><span data-custom-class="heading_1"><h2>2. INTELLECTUAL PROPERTY RIGHTS</h2></span></strong></div>
+        <div class="policy-lh"><strong><span data-custom-class="heading_2"><h3>Our intellectual property</h3></span></strong></div>
+        <div data-custom-class="body_text" class="policy-lh">We are the owner or the licensee of all intellectual property rights in our Services, including all source code, databases, functionality, software, website designs, audio, video, text, photographs, and graphics in the Services (collectively, the 'Content'), as well as the trademarks, service marks, and logos contained therein (the 'Marks').</div>
+        <div><br></div>
+        <div data-custom-class="body_text" class="policy-lh">Our Content and Marks are protected by copyright and trademark laws and treaties around the world.</div>
+        <div><br></div>
+        <div data-custom-class="body_text" class="policy-lh">The Content and Marks are provided in or through the Services 'AS IS' for your personal, non-commercial use or internal business purpose only.</div>
+        <div class="policy-lh"><strong><span data-custom-class="heading_2"><h3>Your use of our Services</h3></span></strong></div>
+        <div data-custom-class="body_text" class="policy-lh">Subject to your compliance with these Legal Terms, including the <a href="#tc-prohibited" data-custom-class="link">PROHIBITED ACTIVITIES</a> section below, we grant you a non-exclusive, non-transferable, revocable licence to:</div>
+        <ul>
+          <li data-custom-class="body_text" class="policy-lh">access the Services; and</li>
+          <li data-custom-class="body_text" class="policy-lh">download or print a copy of any portion of the Content to which you have properly gained access,</li>
+        </ul>
+        <div data-custom-class="body_text" class="policy-lh">solely for your personal, non-commercial use or internal business purpose.</div>
+        <div><br></div>
+        <div data-custom-class="body_text" class="policy-lh">Except as set out in this section or elsewhere in our Legal Terms, no part of the Services and no Content or Marks may be copied, reproduced, aggregated, republished, uploaded, posted, publicly displayed, encoded, translated, transmitted, distributed, sold, licensed, or otherwise exploited for any commercial purpose whatsoever, without our express prior written permission.</div>
+        <div><br></div>
+        <div data-custom-class="body_text" class="policy-lh">Any breach of these Intellectual Property Rights will constitute a material breach of our Legal Terms and your right to use our Services will terminate immediately.</div>
+        <div class="policy-lh"><strong><span data-custom-class="heading_2"><h3>Your submissions</h3></span></strong></div>
+        <div data-custom-class="body_text" class="policy-lh">By directly sending us any question, comment, suggestion, idea, feedback, or other information about the Services ('Submissions'), you agree to assign to us all intellectual property rights in such Submission. You agree that we shall own this Submission and be entitled to its unrestricted use and dissemination for any lawful purpose, commercial or otherwise, without acknowledgment or compensation to you.</div>
+        <div><br></div>
+        <div data-custom-class="body_text" class="policy-lh"><strong>You are responsible for what you post or upload:</strong> By sending us Submissions through any part of the Services you confirm that you have read and agree with our <a href="#tc-prohibited" data-custom-class="link">PROHIBITED ACTIVITIES</a> and will not post, send, publish, upload, or transmit through the Services any Submission that is illegal, harassing, hateful, harmful, defamatory, obscene, bullying, abusive, discriminatory, threatening, sexually explicit, false, inaccurate, deceitful, or misleading.</div>
+        <div><br></div>
+
+        <!-- SECTION 3 -->
+        <div id="tc-userreps" class="policy-lh"><strong><span data-custom-class="heading_1"><h2>3. USER REPRESENTATIONS</h2></span></strong></div>
+        <div data-custom-class="body_text" class="policy-lh">By using the Services, you represent and warrant that: (1) you have the legal capacity and agree to comply with these Legal Terms; (2) you are not a minor in the jurisdiction in which you reside; (3) you will not access the Services through automated or non-human means, whether through a bot, script or otherwise; (4) you will not use the Services for any illegal or unauthorised purpose; and (5) your use of the Services will not violate any applicable law or regulation.</div>
+        <div><br></div>
+
+        <!-- SECTION 4 -->
+        <div id="tc-userreg" class="policy-lh"><strong><span data-custom-class="heading_1"><h2>4. USER REGISTRATION</h2></span></strong></div>
+        <div data-custom-class="body_text" class="policy-lh">PawCalc does not currently require users to register for an account to use the Services. The calculators are available to all visitors without registration. If you choose to subscribe to our mailing list via the email sign-up forms, you will be providing your email address voluntarily, and you may unsubscribe at any time via the link included in every email we send.</div>
+        <div><br></div>
+
+        <!-- SECTION 5 -->
+        <div id="tc-prohibited" class="policy-lh"><strong><span data-custom-class="heading_1"><h2>5. PROHIBITED ACTIVITIES</h2></span></strong></div>
+        <div data-custom-class="body_text" class="policy-lh">You may not access or use the Services for any purpose other than that for which we make the Services available. The Services may not be used in connection with any commercial endeavours except those that are specifically endorsed or approved by us.</div>
+        <div><br></div>
+        <div data-custom-class="body_text" class="policy-lh">As a user of the Services, you agree not to:</div>
+        <ul>
+          <li data-custom-class="body_text" class="policy-lh">Systematically retrieve data or other content from the Services to create or compile, directly or indirectly, a collection, compilation, database, or directory without written permission from us.</li>
+          <li data-custom-class="body_text" class="policy-lh">Trick, defraud, or mislead us and other users, especially in any attempt to learn sensitive account information such as user passwords.</li>
+          <li data-custom-class="body_text" class="policy-lh">Circumvent, disable, or otherwise interfere with security-related features of the Services.</li>
+          <li data-custom-class="body_text" class="policy-lh">Disparage, tarnish, or otherwise harm, in our opinion, us and/or the Services.</li>
+          <li data-custom-class="body_text" class="policy-lh">Use any information obtained from the Services in order to harass, abuse, or harm another person.</li>
+          <li data-custom-class="body_text" class="policy-lh">Make improper use of our support services or submit false reports of abuse or misconduct.</li>
+          <li data-custom-class="body_text" class="policy-lh">Use the Services in a manner inconsistent with any applicable laws or regulations.</li>
+          <li data-custom-class="body_text" class="policy-lh">Engage in unauthorised framing of or linking to the Services.</li>
+          <li data-custom-class="body_text" class="policy-lh">Upload or transmit viruses, Trojan horses, or other material that interferes with any party's uninterrupted use and enjoyment of the Services.</li>
+          <li data-custom-class="body_text" class="policy-lh">Engage in any automated use of the system, such as using scripts to send comments or messages, or using any data mining, robots, or similar data gathering and extraction tools.</li>
+          <li data-custom-class="body_text" class="policy-lh">Delete the copyright or other proprietary rights notice from any Content.</li>
+          <li data-custom-class="body_text" class="policy-lh">Attempt to impersonate another user or person or use the username of another user.</li>
+          <li data-custom-class="body_text" class="policy-lh">Upload or transmit any material that acts as a passive or active information collection or transmission mechanism, including clear graphics interchange formats ('gifs'), 1×1 pixels, web bugs, cookies, or other similar devices.</li>
+          <li data-custom-class="body_text" class="policy-lh">Interfere with, disrupt, or create an undue burden on the Services or the networks or services connected to the Services.</li>
+          <li data-custom-class="body_text" class="policy-lh">Harass, annoy, intimidate, or threaten any of our employees or agents engaged in providing any portion of the Services to you.</li>
+          <li data-custom-class="body_text" class="policy-lh">Attempt to bypass any measures of the Services designed to prevent or restrict access to the Services, or any portion of the Services.</li>
+          <li data-custom-class="body_text" class="policy-lh">Copy or adapt the Services' software, including but not limited to Flash, PHP, HTML, JavaScript, or other code.</li>
+          <li data-custom-class="body_text" class="policy-lh">Except as permitted by applicable law, decipher, decompile, disassemble, or reverse engineer any of the software comprising or in any way making up a part of the Services.</li>
+          <li data-custom-class="body_text" class="policy-lh">Except as may be the result of standard search engine or Internet browser usage, use, launch, develop, or distribute any automated system, including without limitation, any spider, robot, cheat utility, scraper, or offline reader that accesses the Services.</li>
+          <li data-custom-class="body_text" class="policy-lh">Use a buying agent or purchasing agent to make purchases on the Services.</li>
+          <li data-custom-class="body_text" class="policy-lh">Make any unauthorised use of the Services, including collecting usernames and/or email addresses of users by electronic or other means for the purpose of sending unsolicited email.</li>
+          <li data-custom-class="body_text" class="policy-lh">Use the Services as part of any effort to compete with us or otherwise use the Services and/or the Content for any revenue-generating endeavour or commercial enterprise.</li>
+          <li data-custom-class="body_text" class="policy-lh">Sell or otherwise transfer your profile.</li>
+          <li data-custom-class="body_text" class="policy-lh">Use the Services to advertise or offer to sell goods and services.</li>
+        </ul>
+        <div><br></div>
+
+        <!-- SECTION 6 -->
+        <!-- SECTION 6 -->
+        <div id="tc-ugc" class="policy-lh"><strong><span data-custom-class="heading_1"><h2>6. USER GENERATED CONTRIBUTIONS</h2></span></strong></div>
+        <div data-custom-class="body_text" class="policy-lh">PawCalc does not offer users the ability to submit, post, or publish content on the Services. The Services are a read-only set of calculators and informational tools. If you contact us directly (for example by email), any information you provide in that communication will be handled in accordance with our Privacy Policy.</div>
+        <div><br></div>
+
+        <!-- SECTION 7 -->
+        <div id="tc-license" class="policy-lh"><strong><span data-custom-class="heading_1"><h2>7. FEEDBACK</h2></span></strong></div>
+        <div data-custom-class="body_text" class="policy-lh">If you send us suggestions, ideas, or feedback regarding the Services (for example by email), you agree that we may use and share such feedback for the purpose of improving the Services without any obligation to compensate you. We will handle any personal information contained in such communications in accordance with our Privacy Policy.</div>
+        <div><br></div>
+
+        <!-- SECTION 8 -->
+        <div id="tc-thirdparty" class="policy-lh"><strong><span data-custom-class="heading_1"><h2>8. THIRD-PARTY WEBSITES AND CONTENT</h2></span></strong></div>
+        <div data-custom-class="body_text" class="policy-lh">The Services may contain links to other websites ('Third-Party Websites') as well as articles, photographs, text, graphics, pictures, designs, music, sound, video, information, applications, software, and other content or items belonging to or originating from third parties ('Third-Party Content'). Such Third-Party Websites and Third-Party Content are not investigated, monitored, or checked for accuracy, appropriateness, or completeness by us, and we are not responsible for any Third-Party Websites accessed through the Services or any Third-Party Content posted on, available through, or installed from the Services. Inclusion of, linking to, or permitting the use or installation of any Third-Party Websites or any Third-Party Content does not imply approval or endorsement thereof by us. If you decide to leave the Services and access the Third-Party Websites or to use or install any Third-Party Content, you do so at your own risk, and you should be aware these Legal Terms no longer govern. You agree and acknowledge that we do not endorse the products or services offered on Third-Party Websites and you shall hold us blameless from any harm caused by your purchase of such products or services.</div>
+        <div><br></div>
+
+        <!-- SECTION 9 -->
+        <div id="tc-advertisers" class="policy-lh"><strong><span data-custom-class="heading_1"><h2>9. ADVERTISERS</h2></span></strong></div>
+        <div data-custom-class="body_text" class="policy-lh">We allow advertisers to display their advertisements and other information in certain areas of the Services, such as sidebar advertisements or banner advertisements. We simply provide the space to place such advertisements, and we have no other relationship with advertisers.</div>
+        <div><br></div>
+
+        <!-- SECTION 10 -->
+        <div id="tc-sitemanage" class="policy-lh"><strong><span data-custom-class="heading_1"><h2>10. SERVICES MANAGEMENT</h2></span></strong></div>
+        <div data-custom-class="body_text" class="policy-lh">We reserve the right, but not the obligation, to: (1) monitor the Services for violations of these Legal Terms; (2) take appropriate legal action against anyone who, in our sole discretion, violates the law or these Legal Terms, including without limitation, reporting such user to law enforcement authorities; (3) in our sole discretion and without limitation, refuse, restrict access to, limit the availability of, or disable (to the extent technologically feasible) any of your Contributions or any portion thereof; (4) in our sole discretion and without limitation, notice, or liability, to remove from the Services or otherwise disable all files and content that are excessive in size or are in any way burdensome to our systems; and (5) otherwise manage the Services in a manner designed to protect our rights and property and to facilitate the proper functioning of the Services.</div>
+        <div><br></div>
+
+        <!-- SECTION 11 -->
+        <div id="tc-ppyes" class="policy-lh"><strong><span data-custom-class="heading_1"><h2>11. PRIVACY POLICY</h2></span></strong></div>
+        <div data-custom-class="body_text" class="policy-lh">We care about data privacy and security. Please review our Privacy Policy. By using the Services, you agree to be bound by our Privacy Policy, which is incorporated into these Legal Terms. Please be advised the Services are hosted in the United Kingdom. If you access the Services from any other region of the world with laws or other requirements governing personal data collection, use, or disclosure that differ from applicable laws in the United Kingdom, then through your continued use of the Services, you are transferring your data to the United Kingdom, and you expressly consent to have your data transferred to and processed in the United Kingdom.</div>
+        <div><br></div>
+
+        <!-- SECTION 12 -->
+        <div id="tc-terms" class="policy-lh"><strong><span data-custom-class="heading_1"><h2>12. TERM AND TERMINATION</h2></span></strong></div>
+        <div data-custom-class="body_text" class="policy-lh">These Legal Terms shall remain in full force and effect while you use the Services. WE RESERVE THE RIGHT, IN OUR SOLE DISCRETION AND WITHOUT NOTICE OR LIABILITY, TO DENY ACCESS TO AND USE OF THE SERVICES (INCLUDING BLOCKING CERTAIN IP ADDRESSES) TO ANY PERSON FOR ANY REASON, INCLUDING FOR BREACH OF ANY PROVISION OF THESE LEGAL TERMS OR OF ANY APPLICABLE LAW OR REGULATION. Nothing in this section affects any statutory rights you have as a UK consumer.</div>
+        <div><br></div>
+
+        <!-- SECTION 13 -->
+        <div id="tc-modifications" class="policy-lh"><strong><span data-custom-class="heading_1"><h2>13. MODIFICATIONS AND INTERRUPTIONS</h2></span></strong></div>
+        <div data-custom-class="body_text" class="policy-lh">We reserve the right to change, modify, or remove the contents of the Services at any time or for any reason at our sole discretion without notice. However, we have no obligation to update any information on our Services. We will not be liable to you or any third party for any modification, price change, suspension, or discontinuance of the Services.</div>
+        <div><br></div>
+        <div data-custom-class="body_text" class="policy-lh">We cannot guarantee the Services will be available at all times. We may experience hardware, software, or other problems or need to perform maintenance related to the Services, resulting in interruptions, delays, or errors. We reserve the right to change, revise, update, suspend, discontinue, or otherwise modify the Services at any time or for any reason without notice to you. You agree that we have no liability whatsoever for any loss, damage, or inconvenience caused by your inability to access or use the Services during any downtime or discontinuance of the Services.</div>
+        <div><br></div>
+
+        <!-- SECTION 14 -->
+        <div id="tc-law" class="policy-lh"><strong><span data-custom-class="heading_1"><h2>14. GOVERNING LAW</h2></span></strong></div>
+        <div data-custom-class="body_text" class="policy-lh">These Legal Terms are governed by and interpreted following the laws of England and Wales, and the use of the United Nations Convention of Contracts for the International Sales of Goods is expressly excluded. If your habitual residence is in the EU, and you are a consumer, you additionally possess the protection provided to you by obligatory provisions of the law in your country of residence. PawCalc and yourself both agree to submit to the non-exclusive jurisdiction of the courts of London, which means that you may make a claim to defend your consumer protection rights in regards to these Legal Terms in England, or in the EU country in which you reside.</div>
+        <div><br></div>
+
+        <!-- SECTION 15 -->
+        <div id="tc-disputes" class="policy-lh"><strong><span data-custom-class="heading_1"><h2>15. DISPUTE RESOLUTION</h2></span></strong></div>
+        <div class="policy-lh"><strong><span data-custom-class="heading_2"><h3>Informal Resolution</h3></span></strong></div>
+        <div data-custom-class="body_text" class="policy-lh">If you have a complaint or dispute relating to these Legal Terms or the Services, we encourage you to contact us first at <a href="mailto:pawcalcc@gmail.com">pawcalcc@gmail.com</a> so we can try to resolve it informally. We will aim to respond within 14 calendar days.</div>
+        <div><br></div>
+        <div class="policy-lh"><strong><span data-custom-class="heading_2"><h3>UK Consumer Rights</h3></span></strong></div>
+        <div data-custom-class="body_text" class="policy-lh">Nothing in these Legal Terms limits or excludes your rights as a consumer under the Consumer Rights Act 2015, the Consumer Protection from Unfair Trading Regulations 2008, or any other applicable UK consumer protection legislation. If you are a consumer based in the United Kingdom, you retain the right to bring proceedings in the courts of England and Wales (or, if you are resident in Scotland or Northern Ireland, in the courts of Scotland or Northern Ireland). EU residents retain the right to bring proceedings in the courts of their country of residence.</div>
+        <div><br></div>
+        <div class="policy-lh"><strong><span data-custom-class="heading_2"><h3>Alternative Dispute Resolution (ADR)</h3></span></strong></div>
+        <div data-custom-class="body_text" class="policy-lh">If we cannot resolve a complaint informally, you may refer it to an Alternative Dispute Resolution (ADR) provider. The European Commission provides an Online Dispute Resolution platform at <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener noreferrer" data-custom-class="link">ec.europa.eu/consumers/odr</a>. UK consumers may also seek advice from Citizens Advice at <a href="https://www.citizensadvice.org.uk" target="_blank" rel="noopener noreferrer" data-custom-class="link">citizensadvice.org.uk</a>.</div>
+        <div><br></div>
+
+        <!-- SECTION 16 -->
+        <div id="tc-corrections" class="policy-lh"><strong><span data-custom-class="heading_1"><h2>16. CORRECTIONS</h2></span></strong></div>
+        <div data-custom-class="body_text" class="policy-lh">There may be information on the Services that contains typographical errors, inaccuracies, or omissions, including descriptions, pricing, availability, and various other information. We reserve the right to correct any errors, inaccuracies, or omissions and to change or update the information on the Services at any time, without prior notice.</div>
+        <div><br></div>
+
+        <!-- SECTION 17 -->
+        <div id="tc-disclaimer" class="policy-lh"><strong><span data-custom-class="heading_1"><h2>17. DISCLAIMER</h2></span></strong></div>
+        <div data-custom-class="body_text" class="policy-lh"><strong>Not financial or veterinary advice.</strong> The cost estimates provided by PawCalc's calculators are indicative figures based on typical UK market data. They do not constitute financial advice, veterinary advice, or a professional recommendation of any kind. You should always seek independent advice from qualified professionals (including vets, financial advisers, and insurance brokers) and obtain individual quotes before making any decisions relating to pet ownership. PawCalc accepts no responsibility for decisions made in reliance on these estimates.</div>
+        <div><br></div>
+        <div data-custom-class="body_text" class="policy-lh"><strong>UK consumer rights.</strong> Nothing in this disclaimer limits or excludes your statutory rights as a consumer under the Consumer Rights Act 2015 or other applicable UK consumer protection law. The Services are provided with reasonable care and skill. Where UK law implies terms into this agreement that cannot be excluded, those terms apply.</div>
+        <div><br></div>
+        <div data-custom-class="body_text" class="policy-lh">THE SERVICES ARE PROVIDED ON AN AS-IS AND AS-AVAILABLE BASIS. TO THE FULLEST EXTENT PERMITTED BY LAW, WE DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, IN CONNECTION WITH THE SERVICES AND YOUR USE THEREOF, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. WE MAKE NO WARRANTIES OR REPRESENTATIONS ABOUT THE ACCURACY OR COMPLETENESS OF THE SERVICES' CONTENT. WE DO NOT WARRANT, ENDORSE, GUARANTEE, OR ASSUME RESPONSIBILITY FOR ANY PRODUCT OR SERVICE ADVERTISED OR OFFERED BY A THIRD PARTY THROUGH THE SERVICES.</div>
+        <div><br></div>
+
+        <!-- SECTION 18 -->
+        <div id="tc-liability" class="policy-lh"><strong><span data-custom-class="heading_1"><h2>18. LIMITATIONS OF LIABILITY</h2></span></strong></div>
+        <div data-custom-class="body_text" class="policy-lh"><strong>Nothing in this section limits or excludes:</strong> (a) any liability for death or personal injury caused by our negligence; (b) any liability for fraud or fraudulent misrepresentation; or (c) any other liability that cannot be excluded or limited under English law, including rights you have under the Consumer Rights Act 2015.</div>
+        <div><br></div>
+        <div data-custom-class="body_text" class="policy-lh">Subject to the above, and to the fullest extent permitted by law, we and our directors, employees, or agents will not be liable to you or any third party for any indirect, consequential, exemplary, incidental, special, or punitive damages — including lost profit, lost revenue, or loss of data — arising from your use of the Services, even if we have been advised of the possibility of such damages. Because PawCalc is a free service, and where liability cannot be wholly excluded under applicable law, our total aggregate liability to you for any cause of action whatsoever shall not exceed £10 (ten pounds sterling). This limitation reflects the fact that PawCalc is provided free of charge and does not replace professional advice.</div>
+        <div><br></div>
+
+        <!-- SECTION 19 -->
+        <div id="tc-indemnification" class="policy-lh"><strong><span data-custom-class="heading_1"><h2>19. INDEMNIFICATION</h2></span></strong></div>
+        <div data-custom-class="body_text" class="policy-lh">You agree to defend, indemnify, and hold us harmless, including our subsidiaries, affiliates, and all of our respective officers, agents, partners, and employees, from and against any loss, damage, liability, claim, or demand, including reasonable attorneys' fees and expenses, made by any third party due to or arising out of: (1) use of the Services; (2) breach of these Legal Terms; (3) any breach of your representations and warranties set forth in these Legal Terms; (4) your violation of the rights of a third party, including but not limited to intellectual property rights; or (5) any overt harmful act toward any other user of the Services with whom you connected via the Services. Notwithstanding the foregoing, we reserve the right, at your expense, to assume the exclusive defence and control of any matter for which you are required to indemnify us, and you agree to cooperate, at your expense, with our defence of such claims.</div>
+        <div><br></div>
+
+        <!-- SECTION 20 -->
+        <div id="tc-userdata" class="policy-lh"><strong><span data-custom-class="heading_1"><h2>20. USER DATA</h2></span></strong></div>
+        <div data-custom-class="body_text" class="policy-lh">We will maintain certain data that you transmit to the Services for the purpose of managing the performance of the Services, as well as data relating to your use of the Services. Although we perform regular routine backups of data, you are solely responsible for all data that you transmit or that relates to any activity you have undertaken using the Services. You agree that we shall have no liability to you for any loss or corruption of any such data, and you hereby waive any right of action against us arising from any such loss or corruption of such data.</div>
+        <div><br></div>
+
+        <!-- SECTION 21 -->
+        <div id="tc-electronic" class="policy-lh"><strong><span data-custom-class="heading_1"><h2>21. ELECTRONIC COMMUNICATIONS, TRANSACTIONS, AND SIGNATURES</h2></span></strong></div>
+        <div data-custom-class="body_text" class="policy-lh">Visiting the Services, sending us emails, and completing online forms constitute electronic communications. You consent to receive electronic communications, and you agree that all agreements, notices, disclosures, and other communications we provide to you electronically, via email and on the Services, satisfy any legal requirement that such communication be in writing. YOU HEREBY AGREE TO THE USE OF ELECTRONIC SIGNATURES, CONTRACTS, ORDERS, AND OTHER RECORDS, AND TO ELECTRONIC DELIVERY OF NOTICES, POLICIES, AND RECORDS OF TRANSACTIONS INITIATED OR COMPLETED BY US OR VIA THE SERVICES. You hereby waive any rights or requirements under any statutes, regulations, rules, ordinances, or other laws in any jurisdiction which require an original signature or delivery or retention of non-electronic records, or to payments or the granting of credits by any means other than electronic means.</div>
+        <div><br></div>
+
+        <!-- SECTION 22 -->
+        <div id="tc-california" class="policy-lh"><strong><span data-custom-class="heading_1"><h2>22. JURISDICTION-SPECIFIC CONSUMER RIGHTS</h2></span></strong></div>
+        <div class="policy-lh"><strong><span data-custom-class="heading_2"><h3>UK Consumers</h3></span></strong></div>
+        <div data-custom-class="body_text" class="policy-lh">If you are a UK consumer and are not satisfied with our response to a complaint, you may seek advice or assistance from Citizens Advice (citizensadvice.org.uk), or contact your local Trading Standards office. You also have the right to lodge a complaint with the Information Commissioner's Office (ico.org.uk) in respect of any data protection concerns.</div>
+        <div><br></div>
+        <div class="policy-lh"><strong><span data-custom-class="heading_2"><h3>California Users and Residents</h3></span></strong></div>
+        <div data-custom-class="body_text" class="policy-lh">If any complaint with us is not satisfactorily resolved, you can contact the Complaint Assistance Unit of the Division of Consumer Services of the California Department of Consumer Affairs in writing at 1625 North Market Blvd., Suite N 112, Sacramento, California 95834 or by telephone at (800) 952-5210 or (916) 445-1254.</div>
+        <div><br></div>
+
+        <!-- SECTION 23 -->
+        <div id="tc-misc" class="policy-lh"><strong><span data-custom-class="heading_1"><h2>23. MISCELLANEOUS</h2></span></strong></div>
+        <div data-custom-class="body_text" class="policy-lh">These Legal Terms and any policies or operating rules posted by us on the Services or in respect to the Services constitute the entire agreement and understanding between you and us. Our failure to exercise or enforce any right or provision of these Legal Terms shall not operate as a waiver of such right or provision. These Legal Terms operate to the fullest extent permissible by law. We may assign any or all of our rights and obligations to others at any time. We shall not be responsible or liable for any loss, damage, delay, or failure to act caused by any cause beyond our reasonable control. If any provision or part of a provision of these Legal Terms is determined to be unlawful, void, or unenforceable, that provision or part of the provision is deemed severable from these Legal Terms and does not affect the validity and enforceability of any remaining provisions. There is no joint venture, partnership, employment or agency relationship created between you and us as a result of these Legal Terms or use of the Services. You agree that these Legal Terms will not be construed against us by virtue of having drafted them. You hereby waive any and all defences you may have based on the electronic form of these Legal Terms and the lack of signing by the parties hereto to execute these Legal Terms.</div>
+        <div><br></div>
+
+        <!-- SECTION 24 -->
+        <div id="tc-contact" class="policy-lh"><strong><span data-custom-class="heading_1"><h2>24. CONTACT US</h2></span></strong></div>
+        <div data-custom-class="body_text" class="policy-lh">In order to resolve a complaint regarding the Services or to receive further information regarding use of the Services, please contact us at:</div>
+        <div><br></div>
+        <div data-custom-class="body_text" class="policy-lh">
+          <strong>PawCalc</strong><br>
+          Email: <a href="mailto:pawcalcc@gmail.com">pawcalcc@gmail.com</a>
+        </div>
+
+      </div><!-- /data-custom-class="body" -->
+    </div><!-- /pp-card -->
+  </main>
+
+  <footer class="pp-footer">
+    <div class="pp-footer-inner">
+      <div>
+        <strong>PawCalc</strong> — Estimates based on typical UK &amp; US market prices.<br>
+        Always get quotes from local breeders, vets, and suppliers. PawCalc is not financial advice.
+      </div>
+      <nav class="overlay-footer-nav" aria-label="Terms page footer navigation">
+        <a href="/">Back to Calculator</a>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/cookie-policy.html">Cookie Policy</a>
+      </nav>
+    </div>
+  </footer>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "name": "PawCalc — Pet Cost Calculator",
+  "short_name": "PawCalc",
+  "description": "Free UK pet cost calculators for dogs, cats, rabbits and more.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F5F0E8",
+  "theme_color": "#1B4332",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
